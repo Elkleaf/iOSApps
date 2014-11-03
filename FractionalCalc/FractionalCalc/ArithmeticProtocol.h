@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @protocol ArithmeticProtocol <NSObject>
+-(id)add:(id)rhs;
+-(id)subtract:(id)numberToSubtract;
+-(id) divide: (id) divideBy;
+-(id) multiply: (id) multiplyBy;
 
 @end

@@ -22,6 +22,10 @@
 		E941134719FDC29B00350574 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E941132619FDC29B00350574 /* UIKit.framework */; };
 		E941134F19FDC29B00350574 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E941134D19FDC29B00350574 /* InfoPlist.strings */; };
 		E941135119FDC29B00350574 /* FractionalCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E941135019FDC29B00350574 /* FractionalCalcTests.m */; };
+		E941135C19FDC33000350574 /* FractionalNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = E941135B19FDC33000350574 /* FractionalNumber.m */; };
+		E941135E19FEB88400350574 /* button_textfield.png in Resources */ = {isa = PBXBuildFile; fileRef = E941135D19FEB88400350574 /* button_textfield.png */; };
+		E94113A51A00940500350574 /* CalcEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E94113A41A00940500350574 /* CalcEngine.m */; };
+		E94113A91A030F8E00350574 /* DisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E94113A81A030F8E00350574 /* DisplayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,14 @@
 		E941134C19FDC29B00350574 /* FractionalCalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FractionalCalcTests-Info.plist"; sourceTree = "<group>"; };
 		E941134E19FDC29B00350574 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E941135019FDC29B00350574 /* FractionalCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FractionalCalcTests.m; sourceTree = "<group>"; };
+		E941135A19FDC33000350574 /* FractionalNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FractionalNumber.h; sourceTree = "<group>"; };
+		E941135B19FDC33000350574 /* FractionalNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FractionalNumber.m; sourceTree = "<group>"; };
+		E941135D19FEB88400350574 /* button_textfield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_textfield.png; sourceTree = "<group>"; };
+		E94113A31A00940500350574 /* CalcEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcEngine.h; sourceTree = "<group>"; };
+		E94113A41A00940500350574 /* CalcEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcEngine.m; sourceTree = "<group>"; };
+		E94113A61A00968900350574 /* ArithmeticProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArithmeticProtocol.h; sourceTree = "<group>"; };
+		E94113A71A030F8E00350574 /* DisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayView.h; sourceTree = "<group>"; };
+		E94113A81A030F8E00350574 /* DisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +132,13 @@
 				E941133719FDC29B00350574 /* Main_iPad.storyboard */,
 				E941133A19FDC29B00350574 /* ViewController.h */,
 				E941133B19FDC29B00350574 /* ViewController.m */,
+				E941135A19FDC33000350574 /* FractionalNumber.h */,
+				E941135B19FDC33000350574 /* FractionalNumber.m */,
+				E94113A31A00940500350574 /* CalcEngine.h */,
+				E94113A41A00940500350574 /* CalcEngine.m */,
+				E94113A61A00968900350574 /* ArithmeticProtocol.h */,
+				E94113A81A030F8E00350574 /* DisplayView.m */,
+				E94113A71A030F8E00350574 /* DisplayView.h */,
 				E941133D19FDC29B00350574 /* Images.xcassets */,
 				E941132919FDC29B00350574 /* Supporting Files */,
 			);
@@ -129,6 +148,7 @@
 		E941132919FDC29B00350574 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E941135D19FEB88400350574 /* button_textfield.png */,
 				E941132A19FDC29B00350574 /* FractionalCalc-Info.plist */,
 				E941132B19FDC29B00350574 /* InfoPlist.strings */,
 				E941132E19FDC29B00350574 /* main.m */,
@@ -231,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E941135E19FEB88400350574 /* button_textfield.png in Resources */,
 				E941133919FDC29B00350574 /* Main_iPad.storyboard in Resources */,
 				E941133E19FDC29B00350574 /* Images.xcassets in Resources */,
 				E941133619FDC29B00350574 /* Main_iPhone.storyboard in Resources */,
@@ -254,6 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E941133C19FDC29B00350574 /* ViewController.m in Sources */,
+				E94113A91A030F8E00350574 /* DisplayView.m in Sources */,
+				E94113A51A00940500350574 /* CalcEngine.m in Sources */,
+				E941135C19FDC33000350574 /* FractionalNumber.m in Sources */,
 				E941133319FDC29B00350574 /* AppDelegate.m in Sources */,
 				E941132F19FDC29B00350574 /* main.m in Sources */,
 			);
