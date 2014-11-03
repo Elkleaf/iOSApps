@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E941136C19FF26F200350574 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E941136B19FF26F200350574 /* Foundation.framework */; };
+		E941136E19FF26F200350574 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E941136D19FF26F200350574 /* CoreGraphics.framework */; };
+		E941137019FF26F200350574 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E941136F19FF26F200350574 /* UIKit.framework */; };
+		E941137619FF26F200350574 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E941137419FF26F200350574 /* InfoPlist.strings */; };
+		E941137819FF26F200350574 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E941137719FF26F200350574 /* main.m */; };
+		E941137C19FF26F200350574 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E941137B19FF26F200350574 /* AppDelegate.m */; };
+		E941137F19FF26F200350574 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E941137D19FF26F200350574 /* Main_iPhone.storyboard */; };
+		E941138219FF26F200350574 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E941138019FF26F200350574 /* Main_iPad.storyboard */; };
+		E941138519FF26F200350574 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E941138419FF26F200350574 /* ViewController.m */; };
+		E941138719FF26F200350574 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E941138619FF26F200350574 /* Images.xcassets */; };
+		E941138E19FF26F300350574 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E941138D19FF26F300350574 /* XCTest.framework */; };
+		E941138F19FF26F300350574 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E941136B19FF26F200350574 /* Foundation.framework */; };
+		E941139019FF26F300350574 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E941136F19FF26F200350574 /* UIKit.framework */; };
+		E941139819FF26F300350574 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E941139619FF26F300350574 /* InfoPlist.strings */; };
+		E941139A19FF26F300350574 /* NoemiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E941139919FF26F300350574 /* NoemiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E941139119FF26F300350574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E941136019FF26F200350574 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E941136719FF26F200350574;
+			remoteInfo = Noemi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E941136819FF26F200350574 /* Noemi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noemi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E941136B19FF26F200350574 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E941136D19FF26F200350574 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E941136F19FF26F200350574 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E941137319FF26F200350574 /* Noemi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Noemi-Info.plist"; sourceTree = "<group>"; };
+		E941137519FF26F200350574 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E941137719FF26F200350574 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E941137919FF26F200350574 /* Noemi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Noemi-Prefix.pch"; sourceTree = "<group>"; };
+		E941137A19FF26F200350574 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E941137B19FF26F200350574 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E941137E19FF26F200350574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		E941138119FF26F200350574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		E941138319FF26F200350574 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E941138419FF26F200350574 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E941138619FF26F200350574 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E941138C19FF26F300350574 /* NoemiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoemiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E941138D19FF26F300350574 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E941139519FF26F300350574 /* NoemiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NoemiTests-Info.plist"; sourceTree = "<group>"; };
+		E941139719FF26F300350574 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E941139919FF26F300350574 /* NoemiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoemiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E941136519FF26F200350574 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E941136E19FF26F200350574 /* CoreGraphics.framework in Frameworks */,
+				E941137019FF26F200350574 /* UIKit.framework in Frameworks */,
+				E941136C19FF26F200350574 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E941138919FF26F300350574 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E941138E19FF26F300350574 /* XCTest.framework in Frameworks */,
+				E941139019FF26F300350574 /* UIKit.framework in Frameworks */,
+				E941138F19FF26F300350574 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E941135F19FF26F200350574 = {
+			isa = PBXGroup;
+			children = (
+				E941137119FF26F200350574 /* Noemi */,
+				E941139319FF26F300350574 /* NoemiTests */,
+				E941136A19FF26F200350574 /* Frameworks */,
+				E941136919FF26F200350574 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E941136919FF26F200350574 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E941136819FF26F200350574 /* Noemi.app */,
+				E941138C19FF26F300350574 /* NoemiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E941136A19FF26F200350574 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E941136B19FF26F200350574 /* Foundation.framework */,
+				E941136D19FF26F200350574 /* CoreGraphics.framework */,
+				E941136F19FF26F200350574 /* UIKit.framework */,
+				E941138D19FF26F300350574 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E941137119FF26F200350574 /* Noemi */ = {
+			isa = PBXGroup;
+			children = (
+				E941137A19FF26F200350574 /* AppDelegate.h */,
+				E941137B19FF26F200350574 /* AppDelegate.m */,
+				E941137D19FF26F200350574 /* Main_iPhone.storyboard */,
+				E941138019FF26F200350574 /* Main_iPad.storyboard */,
+				E941138319FF26F200350574 /* ViewController.h */,
+				E941138419FF26F200350574 /* ViewController.m */,
+				E941138619FF26F200350574 /* Images.xcassets */,
+				E941137219FF26F200350574 /* Supporting Files */,
+			);
+			path = Noemi;
+			sourceTree = "<group>";
+		};
+		E941137219FF26F200350574 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E941137319FF26F200350574 /* Noemi-Info.plist */,
+				E941137419FF26F200350574 /* InfoPlist.strings */,
+				E941137719FF26F200350574 /* main.m */,
+				E941137919FF26F200350574 /* Noemi-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E941139319FF26F300350574 /* NoemiTests */ = {
+			isa = PBXGroup;
+			children = (
+				E941139919FF26F300350574 /* NoemiTests.m */,
+				E941139419FF26F300350574 /* Supporting Files */,
+			);
+			path = NoemiTests;
+			sourceTree = "<group>";
+		};
+		E941139419FF26F300350574 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E941139519FF26F300350574 /* NoemiTests-Info.plist */,
+				E941139619FF26F300350574 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E941136719FF26F200350574 /* Noemi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E941139D19FF26F300350574 /* Build configuration list for PBXNativeTarget "Noemi" */;
+			buildPhases = (
+				E941136419FF26F200350574 /* Sources */,
+				E941136519FF26F200350574 /* Frameworks */,
+				E941136619FF26F200350574 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Noemi;
+			productName = Noemi;
+			productReference = E941136819FF26F200350574 /* Noemi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E941138B19FF26F300350574 /* NoemiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E94113A019FF26F300350574 /* Build configuration list for PBXNativeTarget "NoemiTests" */;
+			buildPhases = (
+				E941138819FF26F300350574 /* Sources */,
+				E941138919FF26F300350574 /* Frameworks */,
+				E941138A19FF26F300350574 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E941139219FF26F300350574 /* PBXTargetDependency */,
+			);
+			name = NoemiTests;
+			productName = NoemiTests;
+			productReference = E941138C19FF26F300350574 /* NoemiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E941136019FF26F200350574 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Elko, Matt";
+				TargetAttributes = {
+					E941138B19FF26F300350574 = {
+						TestTargetID = E941136719FF26F200350574;
+					};
+				};
+			};
+			buildConfigurationList = E941136319FF26F200350574 /* Build configuration list for PBXProject "Noemi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E941135F19FF26F200350574;
+			productRefGroup = E941136919FF26F200350574 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E941136719FF26F200350574 /* Noemi */,
+				E941138B19FF26F300350574 /* NoemiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E941136619FF26F200350574 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E941138219FF26F200350574 /* Main_iPad.storyboard in Resources */,
+				E941138719FF26F200350574 /* Images.xcassets in Resources */,
+				E941137F19FF26F200350574 /* Main_iPhone.storyboard in Resources */,
+				E941137619FF26F200350574 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E941138A19FF26F300350574 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E941139819FF26F300350574 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E941136419FF26F200350574 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E941138519FF26F200350574 /* ViewController.m in Sources */,
+				E941137C19FF26F200350574 /* AppDelegate.m in Sources */,
+				E941137819FF26F200350574 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E941138819FF26F300350574 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E941139A19FF26F300350574 /* NoemiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E941139219FF26F300350574 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E941136719FF26F200350574 /* Noemi */;
+			targetProxy = E941139119FF26F300350574 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E941137419FF26F200350574 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E941137519FF26F200350574 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E941137D19FF26F200350574 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E941137E19FF26F200350574 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E941138019FF26F200350574 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E941138119FF26F200350574 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		E941139619FF26F300350574 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E941139719FF26F300350574 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E941139B19FF26F300350574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E941139C19FF26F300350574 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E941139E19FF26F300350574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Noemi/Noemi-Prefix.pch";
+				INFOPLIST_FILE = "Noemi/Noemi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E941139F19FF26F300350574 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Noemi/Noemi-Prefix.pch";
+				INFOPLIST_FILE = "Noemi/Noemi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E94113A119FF26F300350574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Noemi.app/Noemi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Noemi/Noemi-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NoemiTests/NoemiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E94113A219FF26F300350574 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Noemi.app/Noemi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Noemi/Noemi-Prefix.pch";
+				INFOPLIST_FILE = "NoemiTests/NoemiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E941136319FF26F200350574 /* Build configuration list for PBXProject "Noemi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E941139B19FF26F300350574 /* Debug */,
+				E941139C19FF26F300350574 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E941139D19FF26F300350574 /* Build configuration list for PBXNativeTarget "Noemi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E941139E19FF26F300350574 /* Debug */,
+				E941139F19FF26F300350574 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E94113A019FF26F300350574 /* Build configuration list for PBXNativeTarget "NoemiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E94113A119FF26F300350574 /* Debug */,
+				E94113A219FF26F300350574 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E941136019FF26F200350574 /* Project object */;
+}
