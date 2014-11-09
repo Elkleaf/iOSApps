@@ -15,4 +15,5 @@
 
 +(CalcEngine*)sharedCalcEngine;
 -(id<ArithmeticProtocol, NSObject>)send: (id<ArithmeticProtocol, NSObject>) anOperand withOperator: (SEL)anOperator;
+-(id<ArithmeticProtocol, NSObject>)evaluate:(id<ArithmeticProtocol, NSObject>) anOperand;
 @end

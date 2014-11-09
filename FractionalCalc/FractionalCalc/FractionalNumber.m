@@ -11,6 +11,7 @@
 @implementation FractionalNumber
 @synthesize numerator;
 @synthesize denominator;
+
 -(FractionalNumber*) initWithNumerator:(int)n Denominator:(int)d
 {
     assert(d!=0);
@@ -18,6 +19,7 @@
     if (self) {
         numerator = n;
         denominator = d;
+        
     }
     return self;
 }
@@ -28,11 +30,15 @@
         int firstTop = (lcm/self.denominator) * self.numerator;
         int secondTop = (lcm/rhs.denominator) * rhs.numerator;
         
-        return [[FractionalNumber alloc]initWithNumerator:(firstTop + secondTop) Denominator:lcm];
+        FractionalNumber* result= [[FractionalNumber alloc]initWithNumerator:(firstTop + secondTop) Denominator:lcm];
+        [result reduce];
+        return result;
     }
     else
     {
-        return [[FractionalNumber alloc]initWithNumerator:(self.numerator + rhs.numerator) Denominator:self.denominator];
+        FractionalNumber* result = [[FractionalNumber alloc]initWithNumerator:(self.numerator + rhs.numerator) Denominator:self.denominator];
+        [result reduce];
+        return result;
     }
     
 }
@@ -43,23 +49,31 @@
         int firstTop = (lcm/self.denominator) * self.numerator;
         int secondTop = (lcm/numberToSubtract.denominator) * numberToSubtract.numerator;
         
-        return [[FractionalNumber alloc]initWithNumerator:(firstTop - secondTop) Denominator:lcm];
+        FractionalNumber* result= [[FractionalNumber alloc]initWithNumerator:(firstTop - secondTop) Denominator:lcm];
+        [result reduce];
+        return result;
     }
     else
     {
-        return [[FractionalNumber alloc]initWithNumerator:(self.numerator - numberToSubtract.numerator) Denominator:self.denominator];
+        FractionalNumber* result = [[FractionalNumber alloc]initWithNumerator:(self.numerator - numberToSubtract.numerator) Denominator:self.denominator];
+        [result reduce];
+        return result;
     }
 
     
 }
 -(FractionalNumber*) divide: (FractionalNumber*) divideBy
 {
-    return [[FractionalNumber alloc]initWithNumerator:(self.numerator * divideBy.denominator) Denominator:(self.denominator * divideBy.numerator)];
+    FractionalNumber* result =[[FractionalNumber alloc]initWithNumerator:(self.numerator * divideBy.denominator) Denominator:(self.denominator * divideBy.numerator)];
+    [result reduce];
+    return result;
     
 }
 -(FractionalNumber*) multiply: (FractionalNumber*) multiplyBy
 {
-    return [[FractionalNumber alloc]initWithNumerator:(self.numerator * multiplyBy.numerator) Denominator:(self.denominator * multiplyBy.denominator)];
+    FractionalNumber* result =[[FractionalNumber alloc]initWithNumerator:(self.numerator * multiplyBy.numerator) Denominator:(self.denominator * multiplyBy.denominator)];
+    [result reduce];
+    return result;
 }
 +(int)GCD:(int)first and: (int)second
 {
@@ -77,5 +91,37 @@
 +(int)LCM:(int)first and: (int)second
 {
     return abs(first *second)/[FractionalNumber GCD:first and:second];
+}
+
+-(void)reduce
+{
+    int gcd;
+    if (self.denominator >= self.numerator)
+    {
+        gcd  = [FractionalNumber GCD:self.denominator and:self.numerator];
+        
+    }
+    else{
+        gcd = [FractionalNumber GCD:self.numerator and:self.denominator];
+       
+    }
+    
+    self.denominator /=  gcd;
+    self.numerator /= gcd;
+    
+}
+-(NSString*)mixedFraction
+{
+    
+    int wholeNumber = (self.numerator / self.denominator);
+    int num = (self.numerator % self.denominator);
+    int denom = self.denominator;
+    NSString *result = [NSString stringWithFormat:@"%d",wholeNumber];
+    result = [result stringByAppendingString:@" "];
+    result = [result stringByAppendingString:[NSString stringWithFormat:@"%d",num]];
+    result = [result stringByAppendingString:[NSString stringWithFormat:@"/%d",denom]];
+    
+    return result;
+    
 }
 @end

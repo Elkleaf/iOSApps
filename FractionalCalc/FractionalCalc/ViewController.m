@@ -18,41 +18,15 @@
 @implementation ViewController
 @synthesize Display;
 bool OperatorPressed = false;
+bool numeratorButton = false;
+bool denominatorButton = false;
+bool signButton = false;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-//    FractionalNumber* firstNum = [[FractionalNumber alloc]initWithNumerator:4 Denominator:5];
-//    FractionalNumber* secondNum = [[FractionalNumber alloc]initWithNumerator:1 Denominator:4];
-//    FractionalNumber* result = [FractionalNumber alloc];
-//    result = [firstNum add:secondNum];
-//    
-//    NSLog(@"numerator is: %d", result.numerator);
-//    NSLog(@"denomenator is : %d", result.denominator);
-//    
-//    result = [firstNum subtract:secondNum];
-//    
-//    NSLog(@"numerator is: %d", result.numerator);
-//    NSLog(@"denomenator is : %d", result.denominator);
-//    
-//    result = [firstNum divide:secondNum];
-//    
-//    NSLog(@"numerator is: %d", result.numerator);
-//    NSLog(@"denomenator is : %d", result.denominator);
-//    
-//    result = [firstNum multiply:secondNum];
-//    NSLog(@"numerator is: %d", result.numerator);
-//    NSLog(@"denomenator is : %d", result.denominator);
-    
-//    CalcEngine* calcEngine =[CalcEngine sharedCalcEngine];
-//    
-//    
-//    result = [calcEngine send:firstNum withOperator:@selector(add:)];
-//    
-//    NSLog(@"result is: %d", result.numerator);
-//    NSLog(@"denominator is: %d", result.denominator);
-    
+	   
+    [Display setText:@"0"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,268 +38,333 @@ bool OperatorPressed = false;
 
 
 - (IBAction)buttonPressed:(id)sender {
+    //get what button was pressed
     int buttonID = [sender tag];
+    
+    //get the calculater engine
     CalcEngine * calcBrain = [CalcEngine sharedCalcEngine];
-    //NSLog(@"the button presssed: %d", buttonID);
-    if (OperatorPressed) {
-        [Display setText:@""];
-    }
+    
+    
+    //store whatever is being displayed into a mutable string
     NSMutableString *tempString = [NSMutableString stringWithString:[Display text]];
-    [tempString replaceOccurrencesOfString:@"+" withString:@"" options:NSLiteralSearch range:NSMakeRange(0, [tempString length])];
     
-//    NSString* numerator = [tempString substringToIndex:subStringLoc];
-//    NSString* denominator = [tempString substringFromIndex:subStringLoc];
-//    
     
-    //NSLog(@"locatoin: %d",subStringLoc);
     switch (buttonID) {
+        //if a number was pressed, just appened to the string
+        case 0:
         case 1:
-        {
-            [tempString appendString:@"1"];
-            [Display setText:tempString];
-            OperatorPressed = false;
-            break;
-        }
         case 2:
-        {
-            [tempString appendString:@"2"];
-            [Display setText:tempString];
-            OperatorPressed = false;
-            break;
-        }
         case 3:
-        {
-            [tempString appendString:@"3"];
-            [Display setText:tempString];
-            OperatorPressed = false;
-            break;
-        }
         case 4:
-        {
-            [tempString appendString:@"4"];
-            [Display setText:tempString];
-            OperatorPressed = false;
-            break;
-        }
         case 5:
-        {
-            [tempString appendString:@"5"];
-            [Display setText:tempString];
-            OperatorPressed = false;
-            break;
-        }
         case 6:
-        {
-            [tempString appendString:@"6"];
-            [Display setText:tempString];
-            OperatorPressed = false;
-            break;
-        }
         case 7:
-        {
-            [tempString appendString:@"7"];
-            [Display setText:tempString];
-            OperatorPressed = false;
-            break;
-        }
         case 8:
-        {
-            [tempString appendString:@"8"];
-            [Display setText:tempString];
-            OperatorPressed = false;
-            break;
-        }
         case 9:
         {
-            [tempString appendString:@"9"];
+            numeratorButton = false;
+
+            if ([tempString isEqualToString:@"0"]) {
+                tempString = [NSMutableString stringWithString:@""];
+            }
+            if (OperatorPressed) {
+                tempString = [NSMutableString stringWithString:@""];
+            }
+            tempString =[NSMutableString stringWithString:[tempString stringByAppendingFormat:@"%d",buttonID]];
             [Display setText:tempString];
             OperatorPressed = false;
+            denominatorButton = false;
             break;
         }
-        // addition sign
+        // operators were pressed
         case 10:
-        {
-            OperatorPressed = true;
-            
-            
-            int subStringLoc = [tempString rangeOfString:@"/"].location;
-            if (subStringLoc != NSNotFound) {
-                NSString* numerator = [tempString substringToIndex:subStringLoc];
-                NSString* denominator = [tempString substringFromIndex:subStringLoc+1];
-                NSLog(@"the numerator is: %@" , numerator);
-                NSLog(@"the denominator is: %@", denominator);
-                
-                FractionalNumber* newFraction = [[FractionalNumber alloc]initWithNumerator:[numerator intValue] Denominator:[denominator intValue]];
-                newFraction = [calcBrain send:newFraction withOperator:@selector(add:)];
-                NSLog(@"new fraction numerator: %d", newFraction.numerator);
-                NSLog(@"new fraction denominator: %d", newFraction.denominator);
-                numerator = [NSString stringWithFormat:@"%d", newFraction.numerator];
-                denominator = [NSString stringWithFormat:@"%d", newFraction.denominator];
-                numerator = [numerator stringByAppendingString:@"/"];
-                numerator = [numerator stringByAppendingString:denominator];
-                [Display setText:numerator];
-
-            }
-            else
-            {
-                FractionalNumber* newFraction = [[FractionalNumber alloc] initWithNumerator:0 Denominator:1];
-                newFraction = [calcBrain send:newFraction withOperator:@selector(add:)];
-                NSString* numerator = [NSString stringWithFormat:@"%d",newFraction.numerator];
-                NSString* denominator = [NSString stringWithFormat:@"%d",newFraction.denominator];
-                numerator = [numerator stringByAppendingString:@"/"];
-                numerator = [numerator stringByAppendingString:denominator];
-                [Display setText:numerator];
-            }
-            
-            break;
-        }
-        //subtraction sign
         case 11:
-        {
-            OperatorPressed = true;
-            
-            
-            int subStringLoc = [tempString rangeOfString:@"/"].location;
-            if (subStringLoc != NSNotFound) {
-                NSString* numerator = [tempString substringToIndex:subStringLoc];
-                NSString* denominator = [tempString substringFromIndex:subStringLoc+1];
-                NSLog(@"the numerator is: %@" , numerator);
-                NSLog(@"the denominator is: %@", denominator);
-                
-                FractionalNumber* newFraction = [[FractionalNumber alloc]initWithNumerator:[numerator intValue] Denominator:[denominator intValue]];
-                newFraction = [calcBrain send:newFraction withOperator:@selector(subtract:)];
-                NSLog(@"new fraction numerator: %d", newFraction.numerator);
-                NSLog(@"new fraction denominator: %d", newFraction.denominator);
-                numerator = [NSString stringWithFormat:@"%d", newFraction.numerator];
-                denominator = [NSString stringWithFormat:@"%d", newFraction.denominator];
-                numerator = [numerator stringByAppendingString:@"/"];
-                numerator = [numerator stringByAppendingString:denominator];
-                [Display setText:numerator];
-                
-            }
-            else
-            {
-                FractionalNumber* newFraction = [[FractionalNumber alloc] initWithNumerator:0 Denominator:1];
-                newFraction = [calcBrain send:newFraction withOperator:@selector(add:)];
-                NSString* numerator = [NSString stringWithFormat:@"%d",newFraction.numerator];
-                NSString* denominator = [NSString stringWithFormat:@"%d",newFraction.denominator];
-                numerator = [numerator stringByAppendingString:@"/"];
-                numerator = [numerator stringByAppendingString:denominator];
-                [Display setText:numerator];
-            }
-            
-            break;
-        }
-        
-         //division sign
         case 12:
-        {
-            OperatorPressed = true;
-            
-            
-            int subStringLoc = [tempString rangeOfString:@"/"].location;
-            if (subStringLoc != NSNotFound) {
-                NSString* numerator = [tempString substringToIndex:subStringLoc];
-                NSString* denominator = [tempString substringFromIndex:subStringLoc+1];
-                NSLog(@"the numerator is: %@" , numerator);
-                NSLog(@"the denominator is: %@", denominator);
-                
-                FractionalNumber* newFraction = [[FractionalNumber alloc]initWithNumerator:[numerator intValue] Denominator:[denominator intValue]];
-                newFraction = [calcBrain send:newFraction withOperator:@selector(divide:)];
-                NSLog(@"new fraction numerator: %d", newFraction.numerator);
-                NSLog(@"new fraction denominator: %d", newFraction.denominator);
-                numerator = [NSString stringWithFormat:@"%d", newFraction.numerator];
-                denominator = [NSString stringWithFormat:@"%d", newFraction.denominator];
-                numerator = [numerator stringByAppendingString:@"/"];
-                numerator = [numerator stringByAppendingString:denominator];
-                [Display setText:numerator];
-                
-            }
-            else
-            {
-                FractionalNumber* newFraction = [[FractionalNumber alloc] initWithNumerator:0 Denominator:1];
-                newFraction = [calcBrain send:newFraction withOperator:@selector(add:)];
-                NSString* numerator = [NSString stringWithFormat:@"%d",newFraction.numerator];
-                NSString* denominator = [NSString stringWithFormat:@"%d",newFraction.denominator];
-                numerator = [numerator stringByAppendingString:@"/"];
-                numerator = [numerator stringByAppendingString:denominator];
-                [Display setText:numerator];
-            }
-            
-            break;
-        }
-        
-        //multiplication sign
         case 13:
         {
+            //this makes sure that the user can't do an operation without finishing inputing the fraction
+            if (numeratorButton || denominatorButton) {
+                break;
+            }
             OperatorPressed = true;
             
+            //get the location in the string where the '/' is
+            int fractionStringLoc = [tempString rangeOfString:@"/"].location;
             
-            int subStringLoc = [tempString rangeOfString:@"/"].location;
-            if (subStringLoc != NSNotFound) {
-                NSString* numerator = [tempString substringToIndex:subStringLoc];
-                NSString* denominator = [tempString substringFromIndex:subStringLoc+1];
-                NSLog(@"the numerator is: %@" , numerator);
-                NSLog(@"the denominator is: %@", denominator);
+            //if a fraction is found
+            if (fractionStringLoc != NSNotFound) {
                 
+                //make 2 strings. The numerator string will conatin both the whole number and numerator at this point
+                NSString* numerator = [tempString substringToIndex:fractionStringLoc];
+                NSString* denominator = [tempString substringFromIndex:fractionStringLoc+1];
+                
+                //get the location in the string where the space is. This determines the difference between whole and numerator numbers
+                int spaceStringLoc = [numerator rangeOfString:@" "].location;
+                
+                //if there is a space
+                if (spaceStringLoc != NSNotFound) {
+                    NSString* wholeNumber = [numerator substringToIndex:spaceStringLoc];
+                    numerator = [numerator substringFromIndex:spaceStringLoc+1];
+                    numerator = [NSString stringWithFormat:@"%d",(([wholeNumber intValue]*[denominator intValue])+[numerator intValue])];
+                    
+                }
+                
+                //this is an error check to make sure a user can't enter a 0 in the denominator
+                if ([denominator isEqualToString:@"0"]) {
+                    
+                    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Math Error" message:@"you can't have a 0 in the denominator" delegate:self cancelButtonTitle:@"input again" otherButtonTitles:nil];
+                    
+                    [alert show];
+                    break;
+                }
+                
+                //get a fraction number from what the user inputted
                 FractionalNumber* newFraction = [[FractionalNumber alloc]initWithNumerator:[numerator intValue] Denominator:[denominator intValue]];
-                newFraction = [calcBrain send:newFraction withOperator:@selector(multiply:)];
-                NSLog(@"new fraction numerator: %d", newFraction.numerator);
-                NSLog(@"new fraction denominator: %d", newFraction.denominator);
-                numerator = [NSString stringWithFormat:@"%d", newFraction.numerator];
-                denominator = [NSString stringWithFormat:@"%d", newFraction.denominator];
-                numerator = [numerator stringByAppendingString:@"/"];
-                numerator = [numerator stringByAppendingString:denominator];
-                [Display setText:numerator];
                 
+                //based on what button was pressed, send to calc engine to preform
+                if (buttonID == 10) {
+                    newFraction = [calcBrain send:newFraction withOperator:@selector(add:)];
+                }
+                if (buttonID == 11) {
+                    newFraction = [calcBrain send:newFraction withOperator:@selector(subtract:)];
+                }
+                if (buttonID == 12) {
+                    newFraction = [calcBrain send:newFraction withOperator:@selector(divide:)];
+                }
+                if (buttonID == 13) {
+                    newFraction = [calcBrain send:newFraction withOperator:@selector(multiply:)];
+                }
+                
+                [newFraction reduce];
+                
+                //if the denominator is 1, we can just print out the numerator
+                if (newFraction.denominator == 1) {
+                    numerator = [NSString stringWithFormat:@"%d", newFraction.numerator];
+                }
+                else
+                {
+                    //checkst to see if we have an improper fraction or not
+                    if (abs(newFraction.numerator) < newFraction.denominator) {
+                        numerator = [NSString stringWithFormat:@"%d", newFraction.numerator];
+                        denominator = [NSString stringWithFormat:@"%d", newFraction.denominator];
+                        numerator = [numerator stringByAppendingString:@"/"];
+                        numerator = [numerator stringByAppendingString:denominator];
+                    }
+                    else
+                    {
+                        numerator = [newFraction mixedFraction];
+                    }
+                    
+                    
+                }
+                [Display setText:numerator];
             }
+            
+            //if we didn't find a '/' in the tempString, then we are just working with a whole number
+            //we repeat many of the same steps as above
             else
             {
-                FractionalNumber* newFraction = [[FractionalNumber alloc] initWithNumerator:0 Denominator:1];
-                newFraction = [calcBrain send:newFraction withOperator:@selector(add:)];
+                FractionalNumber* newFraction = [[FractionalNumber alloc] initWithNumerator:[[Display text]intValue] Denominator:1];
+                if (buttonID == 10) {
+                    newFraction = [calcBrain send:newFraction withOperator:@selector(add:)];
+                }
+                if (buttonID == 11) {
+                    newFraction = [calcBrain send:newFraction withOperator:@selector(subtract:)];
+                }
+                if (buttonID == 12) {
+                    newFraction = [calcBrain send:newFraction withOperator:@selector(divide:)];
+                }
+                if (buttonID == 13) {
+                    newFraction = [calcBrain send:newFraction withOperator:@selector(multiply:)];
+                }
+
+                [newFraction reduce];
                 NSString* numerator = [NSString stringWithFormat:@"%d",newFraction.numerator];
-                NSString* denominator = [NSString stringWithFormat:@"%d",newFraction.denominator];
-                numerator = [numerator stringByAppendingString:@"/"];
-                numerator = [numerator stringByAppendingString:denominator];
-                [Display setText:numerator];
+                
+                if (newFraction.denominator==1) {
+                    [Display setText:numerator];
+                }
+                else
+                {
+                    if (abs(newFraction.numerator) < newFraction.denominator) {
+                        NSString* denominator = [NSString stringWithFormat:@"%d",newFraction.denominator];
+                        numerator = [numerator stringByAppendingString:@"/"];
+                        numerator = [numerator stringByAppendingString:denominator];
+                    }
+                    else
+                    {
+                        numerator = [newFraction mixedFraction];
+                    }
+                    
+                    [Display setText:numerator];
+                }
             }
             
             break;
         }
 
 
-        
+        //AC button
         case 14:
         {
+            
             [calcBrain setWaitingOperand:[[FractionalNumber alloc]initWithNumerator:0 Denominator:1]];
             [calcBrain setWaitingOperator:@selector(add:)];
-            [Display setText:@""];
+            [Display setText:@"0"];
             break;
         }
+            
+        //denominator button
         case 15:
         {
+            if (numeratorButton) {
+                break;
+            }
+            denominatorButton = true;
             [tempString appendString:@"/"];
             [Display setText:tempString];
             break;
         }
         
+        //numerator button
+        case 16:
+        {
+            numeratorButton = true;
+            [tempString appendString:@" "];
+            [Display setText:tempString];
+            break;
+        }
+            
+        //eqaul sign
+        //many of the steps involved for this button are similar to when the other operators are
+        //except for that instead of calling the 'send:' method, we use the 'evaulate' method for the
+        //calcBrain
+            
         case 17:
         {
-            //I can clean this up:
-            //I can create a new method for the CalcEngine that will perform the operation instead
-            //of having the send: function doing it
-            FractionalNumber* newFraction = [[FractionalNumber alloc] initWithNumerator:0 Denominator:1];
-            newFraction = [calcBrain send:newFraction withOperator:@selector(add:)];
-            NSString* numerator = [NSString stringWithFormat:@"%d",newFraction.numerator];
-            NSString* denominator = [NSString stringWithFormat:@"%d",newFraction.denominator];
-            numerator = [numerator stringByAppendingString:@"/"];
-            numerator = [numerator stringByAppendingString:denominator];
-            [Display setText:numerator];
+            if (numeratorButton) {
+                break;
+            }
+            OperatorPressed = true;
+            
+            
+            int fractionStringLoc = [tempString rangeOfString:@"/"].location;
+            
+            //if a fraction is found
+            if (fractionStringLoc != NSNotFound) {
+                NSString* numerator = [tempString substringToIndex:fractionStringLoc];
+                NSString* denominator = [tempString substringFromIndex:fractionStringLoc+1];
+                int spaceStringLoc = [numerator rangeOfString:@" "].location;
+                if (spaceStringLoc != NSNotFound) {
+                    NSString* wholeNumber = [numerator substringToIndex:spaceStringLoc];
+                    numerator = [numerator substringFromIndex:spaceStringLoc+1];
+                    numerator = [NSString stringWithFormat:@"%d",(([wholeNumber intValue]*[denominator intValue])+[numerator intValue])];
+                    
+                }
+                
+                
+                FractionalNumber* newFraction = [[FractionalNumber alloc]initWithNumerator:[numerator intValue] Denominator:[denominator intValue]];
+                
+                //we won't have a new fraction to send once we press '=', based on how this calc
+                //is currently setup, this was the fasted/easiest way to do this
+                newFraction = [calcBrain evaluate:newFraction];
+                
+                [newFraction reduce];
+                               
+                if (newFraction.denominator == 1) {
+                    numerator = [NSString stringWithFormat:@"%d", newFraction.numerator];
+                }
+                else
+                {
+                    if (abs(newFraction.numerator) < newFraction.denominator) {
+                        numerator = [NSString stringWithFormat:@"%d", newFraction.numerator];
+                        denominator = [NSString stringWithFormat:@"%d", newFraction.denominator];
+                        numerator = [numerator stringByAppendingString:@"/"];
+                        numerator = [numerator stringByAppendingString:denominator];
+                    }
+                    else
+                    {
+                        numerator = [newFraction mixedFraction];
+                    }
+                    
+                    
+                }
+                [Display setText:numerator];
+            }
+            else
+            {
+                FractionalNumber* newFraction = [[FractionalNumber alloc] initWithNumerator:[[Display text]intValue] Denominator:1];
+                newFraction = [calcBrain evaluate:newFraction];
+                [newFraction reduce];
+                NSString* numerator = [NSString stringWithFormat:@"%d",newFraction.numerator];
+                
+                if (newFraction.denominator==1) {
+                    [Display setText:numerator];
+                }
+                else
+                {
+                    if (abs(newFraction.numerator) < newFraction.denominator) {
+                        NSString* denominator = [NSString stringWithFormat:@"%d",newFraction.denominator];
+                        numerator = [numerator stringByAppendingString:@"/"];
+                        numerator = [numerator stringByAppendingString:denominator];
+                    }
+                    else
+                    {
+                        numerator = [newFraction mixedFraction];
+                    }
+                    
+                    [Display setText:numerator];
+                }
+            }
+            //since we pressed the '=', we should reset the waiting operand and operator in the CalcEngine
+            //so that way, once the result is displayed, we can press any other operator to continue using
+            //the result or we can press numbers to start a new set of calculations
+            [calcBrain setWaitingOperand:[[FractionalNumber alloc]initWithNumerator:0 Denominator:1]];
+            [calcBrain setWaitingOperator:@selector(add:)];
+             
+             
+            break;
         }
+            
+            
+        
+        //square root button
+        case 18:
+        {
+            //since the square root button is not implemented, then a message will pop up alerting the user
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"hello" message:@"that's not possible" delegate:self cancelButtonTitle:@"stop" otherButtonTitles:nil];
+            
+            [alert show];
+            break;
+        }
+        
+        //code for the +/-
+        case 19:
+            if ([tempString isEqualToString:@"0"]) {
+                tempString = [NSMutableString stringWithString:@""];
+            }
+            if (!signButton) {
+                NSString* signString = @"-";
+                signString = [signString stringByAppendingString:tempString];
+                signButton = true;
+                [Display setText:signString];
+                break;
+                
+            }
+            else
+            {
+                [tempString replaceOccurrencesOfString:@"-" withString:@"" options:NSLiteralSearch range:NSMakeRange(0, [tempString length])];
+                signButton = false;
+                [Display setText:tempString];
+                break;
+            }
+            
             
         default:
             break;
     }
     
 }
+
+
 @end

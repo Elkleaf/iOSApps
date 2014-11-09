@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Elko, Matt. All rights reserved.
 //
 
+
+//IMPORTANT: this is not used since I am not drawing the fractions out
 #import "DisplayView.h"
 
 @implementation DisplayView

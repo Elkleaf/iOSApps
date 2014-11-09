@@ -32,6 +32,11 @@ static CalcEngine* _engine;
     
     
 }
+-(id<ArithmeticProtocol, NSObject>)evaluate:(id<ArithmeticProtocol, NSObject>) anOperand
+{
+    return [waitingOperand performSelector:waitingOperator withObject:anOperand];
+    
+}
 
 +(CalcEngine*)sharedCalcEngine
 {
