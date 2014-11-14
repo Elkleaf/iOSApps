@@ -44,52 +44,53 @@
 {
     // Drawing code
     //my original measurements were (20.0, 168.0, 100.0, 400.0)
-    
+    //3.5 inch screen is 320/480 in 4inch its 320/568
+    //position of start of bottom lables: 61, 408
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetRGBFillColor(context, 0.0, 0.6, 1.0, 1.0);
-    CGContextAddRect(context, CGRectMake(40.0, 138.0, 100.0, 350.0));
+    CGContextAddRect(context, CGRectMake(40.0, 130.0, 100.0, 278.0));
     CGContextStrokePath(context);
-    CGContextFillRect(context, CGRectMake(40.0, 138.0, 100.0, 350.0));
+    CGContextFillRect(context, CGRectMake(40.0, 130.0, 100.0, 278.0));
     
     
     //this is the total discount rectangle
     //it starts where the static rectangle starts
     CGContextSetRGBFillColor(context, 1.0, 1.0, .5, 1.0);
-    CGContextAddRect(context, CGRectMake(195, 138, 100.0, (350.0*discountPercent)));
+    CGContextAddRect(context, CGRectMake(195, 130, 100.0, (278.0*discountPercent)));
     CGContextStrokePath(context);
-    CGContextFillRect(context, CGRectMake(195, 138, 100.0, (350.0*discountPercent)));
+    CGContextFillRect(context, CGRectMake(195, 130, 100.0, (278.0*discountPercent)));
     
     //this is the tax rectangle
     //this rectangle has to start where the previous one ended
     //and its height has to be a percentage of the static graph
     CGContextSetRGBFillColor(context, 0.0, 1.0, 0.0, 1.0);
-    CGContextAddRect(context, CGRectMake(195, (138+(350.0*discountPercent)), 100.0, (350.0*taxRate)));
+    CGContextAddRect(context, CGRectMake(195, (130+(278.0*discountPercent)), 100.0, (278.0*taxRate)));
     CGContextStrokePath(context);
-    CGContextFillRect(context, CGRectMake(195, (138+(350.0*discountPercent)), 100.0, (350.0*taxRate)));
+    CGContextFillRect(context, CGRectMake(195, (130+(278.0*discountPercent)), 100.0, (278.0*taxRate)));
     
     //this is the final price rectangle
     CGContextSetRGBFillColor(context, 0.0, 0.6, 1.0, 1.0);
-    CGContextAddRect(context, CGRectMake(195, ((138+(350.0*discountPercent))+(350.0*taxRate)), 100.0, (350.0 -((350.0*discountPercent) + (350.0*taxRate)))));
+    CGContextAddRect(context, CGRectMake(195, ((130+(278.0*discountPercent))+(278.0*taxRate)), 100.0, (278.0 -((278.0*discountPercent) + (278.0*taxRate)))));
     CGContextStrokePath(context);
-    CGContextFillRect(context, CGRectMake(195, ((138+(350.0*discountPercent))+(350.0*taxRate)), 100.0, (350.0 -((350.0*discountPercent) + (350.0*taxRate)))));
+    CGContextFillRect(context, CGRectMake(195, ((130+(278.0*discountPercent))+(278.0*taxRate)), 100.0, (278.0 -((278.0*discountPercent) + (278.0*taxRate)))));
     
     //small box to represent the discount color on the graph
     CGContextSetRGBFillColor(context, 1.0, 1.0, .5, 1.0);
-    CGContextAddRect(context, CGRectMake(40, 500, 15, 15));
+    CGContextAddRect(context, CGRectMake(40, 415, 15, 15));
     CGContextStrokePath(context);
-    CGContextFillRect(context, CGRectMake(40, 500, 15, 15));
+    CGContextFillRect(context, CGRectMake(40, 415, 15, 15));
     
     //small box to represent the tax color on the graph
     CGContextSetRGBFillColor(context, 0.0, 1.0, 0.0, 1.0);
-    CGContextAddRect(context, CGRectMake(40, 520, 15, 15));
+    CGContextAddRect(context, CGRectMake(40, 435, 15, 15));
     CGContextStrokePath(context);
-    CGContextFillRect(context, CGRectMake(40, 520, 15, 15));
+    CGContextFillRect(context, CGRectMake(40, 435, 15, 15));
     
     CGContextSetRGBFillColor(context, 0.0, 0.6, 1.0, 1.0);
-    CGContextAddRect(context, CGRectMake(40, 540, 15, 15));
+    CGContextAddRect(context, CGRectMake(40, 455, 15, 15));
     CGContextStrokePath(context);
-    CGContextFillRect(context, CGRectMake(40, 540, 15, 15));
+    CGContextFillRect(context, CGRectMake(40, 455, 15, 15));
     
 }
 

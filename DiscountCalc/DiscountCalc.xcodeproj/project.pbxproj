@@ -10,6 +10,7 @@
 		E9101B9719E1CEE800B28718 /* UITextfield+PrevTextFieldProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E9101B9619E1CEE800B28718 /* UITextfield+PrevTextFieldProperty.m */; };
 		E94113AD1A0EE97700350574 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = E94113AC1A0EE97700350574 /* image2.png */; };
 		E94113AF1A0EE97D00350574 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = E94113AE1A0EE97D00350574 /* image3.png */; };
+		E94113FC1A15DA4200350574 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E94113FB1A15DA4200350574 /* ScrollView.m */; };
 		E9A4F75C19F6E7BB00FA1370 /* severeobeseBMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A4F75B19F6E7BB00FA1370 /* severeobeseBMI.png */; };
 		E9A8D61119DA7042006B2922 /* UITextField+NextTextFieldProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A8D61019DA7042006B2922 /* UITextField+NextTextFieldProperty.m */; };
 		E9A8D61419DBAD51006B2922 /* MyGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A8D61319DBAD51006B2922 /* MyGraphView.m */; };
@@ -48,6 +49,8 @@
 		E9101B9619E1CEE800B28718 /* UITextfield+PrevTextFieldProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextfield+PrevTextFieldProperty.m"; sourceTree = "<group>"; };
 		E94113AC1A0EE97700350574 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
 		E94113AE1A0EE97D00350574 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
+		E94113FA1A15DA4200350574 /* ScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
+		E94113FB1A15DA4200350574 /* ScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollView.m; sourceTree = "<group>"; };
 		E9A4F75B19F6E7BB00FA1370 /* severeobeseBMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = severeobeseBMI.png; sourceTree = "<group>"; };
 		E9A8D60F19DA7042006B2922 /* UITextField+NextTextFieldProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+NextTextFieldProperty.h"; sourceTree = "<group>"; };
 		E9A8D61019DA7042006B2922 /* UITextField+NextTextFieldProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+NextTextFieldProperty.m"; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				E9A8D61019DA7042006B2922 /* UITextField+NextTextFieldProperty.m */,
 				E9101B9519E1CEE800B28718 /* UITextfield+PrevTextFieldProperty.h */,
 				E9101B9619E1CEE800B28718 /* UITextfield+PrevTextFieldProperty.m */,
+				E94113FA1A15DA4200350574 /* ScrollView.h */,
+				E94113FB1A15DA4200350574 /* ScrollView.m */,
 				E9AD45BC19D93299002D8BF5 /* Images.xcassets */,
 				E9AD45A819D93299002D8BF5 /* Supporting Files */,
 			);
@@ -296,6 +301,7 @@
 			files = (
 				E9AD45B219D93299002D8BF5 /* AppDelegate.m in Sources */,
 				E9101B9719E1CEE800B28718 /* UITextfield+PrevTextFieldProperty.m in Sources */,
+				E94113FC1A15DA4200350574 /* ScrollView.m in Sources */,
 				E9A8D61119DA7042006B2922 /* UITextField+NextTextFieldProperty.m in Sources */,
 				E9AD45E919D9D18E002D8BF5 /* PriceTag.m in Sources */,
 				E9AD45E419D9356A002D8BF5 /* GraphViewController.m in Sources */,
