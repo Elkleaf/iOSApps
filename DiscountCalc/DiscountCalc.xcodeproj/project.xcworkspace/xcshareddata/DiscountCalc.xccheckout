@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B3BCBE21-9C93-43C1-8C60-ECBA85B6C844</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DiscountCalc</string>
+	<key>IDESourceControlProjectPath</key>
+	<string>DiscountCalc.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>78F2293E-838B-40C5-9BBF-389C08620B93</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/Elkleaf/411.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>78F2293E-838B-40C5-9BBF-389C08620B93</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>78F2293E-838B-40C5-9BBF-389C08620B93</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DiscountCalc</string>
+		</dict>
+	</array>
+</dict>
+</plist>

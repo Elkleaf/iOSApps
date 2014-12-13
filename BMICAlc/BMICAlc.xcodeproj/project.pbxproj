@@ -28,6 +28,9 @@
 		E973DE4719D1231C005845FF /* ThinBMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E973DE4619D1231C005845FF /* ThinBMI.png */; };
 		E973DE4919D12329005845FF /* NormalBMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E973DE4819D12329005845FF /* NormalBMI.png */; };
 		E973DE4B19D12331005845FF /* ObeseBMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E973DE4A19D12331005845FF /* ObeseBMI.png */; };
+		E9BF96171A22885D00B050AD /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BF96141A22885D00B050AD /* image1.png */; };
+		E9BF96181A22885D00B050AD /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BF96151A22885D00B050AD /* image2.png */; };
+		E9BF96191A22885D00B050AD /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BF96161A22885D00B050AD /* image3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		E973DE4619D1231C005845FF /* ThinBMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThinBMI.png; sourceTree = "<group>"; };
 		E973DE4819D12329005845FF /* NormalBMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NormalBMI.png; sourceTree = "<group>"; };
 		E973DE4A19D12331005845FF /* ObeseBMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ObeseBMI.png; sourceTree = "<group>"; };
+		E9BF96141A22885D00B050AD /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		E9BF96151A22885D00B050AD /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
+		E9BF96161A22885D00B050AD /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,9 @@
 		E973DE0819CA2033005845FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9BF96141A22885D00B050AD /* image1.png */,
+				E9BF96151A22885D00B050AD /* image2.png */,
+				E9BF96161A22885D00B050AD /* image3.png */,
 				E973DE4A19D12331005845FF /* ObeseBMI.png */,
 				E973DE4819D12329005845FF /* NormalBMI.png */,
 				E973DE4419D12312005845FF /* severeobeseBMI.png */,
@@ -251,11 +260,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9BF96181A22885D00B050AD /* image2.png in Resources */,
 				E973DE1819CA2033005845FF /* Main_iPad.storyboard in Resources */,
+				E9BF96171A22885D00B050AD /* image1.png in Resources */,
 				E973DE4919D12329005845FF /* NormalBMI.png in Resources */,
 				E973DE4519D12312005845FF /* severeobeseBMI.png in Resources */,
 				E973DE4319D0DA33005845FF /* button_textfield.png in Resources */,
 				E973DE1D19CA2033005845FF /* Images.xcassets in Resources */,
+				E9BF96191A22885D00B050AD /* image3.png in Resources */,
 				E973DE4719D1231C005845FF /* ThinBMI.png in Resources */,
 				E973DE1519CA2033005845FF /* Main_iPhone.storyboard in Resources */,
 				E973DE4B19D12331005845FF /* ObeseBMI.png in Resources */,
@@ -496,6 +508,7 @@
 				E973DE3519CA2033005845FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E973DE3619CA2033005845FF /* Build configuration list for PBXNativeTarget "BMICAlcTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +517,7 @@
 				E973DE3819CA2033005845FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

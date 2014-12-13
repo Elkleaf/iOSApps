@@ -11,7 +11,7 @@
 		E94113AD1A0EE97700350574 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = E94113AC1A0EE97700350574 /* image2.png */; };
 		E94113AF1A0EE97D00350574 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = E94113AE1A0EE97D00350574 /* image3.png */; };
 		E94113FC1A15DA4200350574 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E94113FB1A15DA4200350574 /* ScrollView.m */; };
-		E9A4F75C19F6E7BB00FA1370 /* severeobeseBMI.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A4F75B19F6E7BB00FA1370 /* severeobeseBMI.png */; };
+		E9A4F75C19F6E7BB00FA1370 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A4F75B19F6E7BB00FA1370 /* image1.png */; };
 		E9A8D61119DA7042006B2922 /* UITextField+NextTextFieldProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A8D61019DA7042006B2922 /* UITextField+NextTextFieldProperty.m */; };
 		E9A8D61419DBAD51006B2922 /* MyGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A8D61319DBAD51006B2922 /* MyGraphView.m */; };
 		E9AD45A219D93299002D8BF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9AD45A119D93299002D8BF5 /* Foundation.framework */; };
@@ -51,7 +51,7 @@
 		E94113AE1A0EE97D00350574 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
 		E94113FA1A15DA4200350574 /* ScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
 		E94113FB1A15DA4200350574 /* ScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollView.m; sourceTree = "<group>"; };
-		E9A4F75B19F6E7BB00FA1370 /* severeobeseBMI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = severeobeseBMI.png; sourceTree = "<group>"; };
+		E9A4F75B19F6E7BB00FA1370 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
 		E9A8D60F19DA7042006B2922 /* UITextField+NextTextFieldProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+NextTextFieldProperty.h"; sourceTree = "<group>"; };
 		E9A8D61019DA7042006B2922 /* UITextField+NextTextFieldProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+NextTextFieldProperty.m"; sourceTree = "<group>"; };
 		E9A8D61219DBAD51006B2922 /* MyGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGraphView.h; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		E9AD45A819D93299002D8BF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E9A4F75B19F6E7BB00FA1370 /* severeobeseBMI.png */,
+				E9A4F75B19F6E7BB00FA1370 /* image1.png */,
 				E94113AC1A0EE97700350574 /* image2.png */,
 				E94113AE1A0EE97D00350574 /* image3.png */,
 				E9AD45E519D937AA002D8BF5 /* button_textfield.png */,
@@ -274,7 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9AD45E619D937AA002D8BF5 /* button_textfield.png in Resources */,
-				E9A4F75C19F6E7BB00FA1370 /* severeobeseBMI.png in Resources */,
+				E9A4F75C19F6E7BB00FA1370 /* image1.png in Resources */,
 				E9AD45B819D93299002D8BF5 /* Main_iPad.storyboard in Resources */,
 				E94113AF1A0EE97D00350574 /* image3.png in Resources */,
 				E9AD45BD19D93299002D8BF5 /* Images.xcassets in Resources */,
